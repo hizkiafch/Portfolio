@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* Sihir agar web meluncur mulus saat menu diklik */
+html {
+  scroll-behavior: smooth;
+}
