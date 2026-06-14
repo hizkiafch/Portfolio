@@ -2,9 +2,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-indigo-500 selection:text-white">
       
-      {/* 1. NAVBAR */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-800">
-        {/* LOGO DENGAN FUNGSI REFRESH HALAMAN */}
         <a 
           href="/" 
           onClick={(e) => {
@@ -16,7 +14,6 @@ export default function App() {
           <img src="/logo.svg" alt="Logo" className="w-8 h-8" />
         </a>
 
-        {/* MENU NAVBAR */}
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
           <a href="#about" className="hover:text-indigo-400 transition-colors">About</a>
           <a href="#projects" className="hover:text-indigo-400 transition-colors">Projects</a>
@@ -26,10 +23,9 @@ export default function App() {
       </nav>
 
 
-      {/* 2. HERO SECTION */}
+
       <main className="max-w-5xl mx-auto px-8 py-12 flex flex-col-reverse md:flex-row justify-between items-center min-h-[85vh] gap-12">
         
-        {/* Text Section */}
         <div className="flex-1 flex flex-col justify-center items-start">
           <p className="text-indigo-400 font-semibold tracking-wide mb-4">
             Hello, Welcome to My Portfolio
@@ -55,7 +51,8 @@ export default function App() {
           </div>
         </div>
 
-        {/* Photo Section */}
+
+
         <div className="relative w-52 h-52 md:w-52 md:h-52 flex-shrink-0 mb-8 md:mb-0 -mt-8 md:-mt-16">
           <div className="absolute inset-0 bg-indigo-500 rounded-full blur-[60px] opacity-20 animate-pulse"></div>
           <img 
@@ -66,11 +63,11 @@ export default function App() {
         </div>
       </main>
 
-     {/* 3. ABOUT SECTION */}
+
+      
       <section id="about" className="max-w-5xl mx-auto px-8 py-24 border-t border-slate-800/50">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Bagian Kiri: Teks */}
           <div>
             <div className="mb-4">
               <span className="inline-block px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-full text-[10px] font-bold tracking-widest uppercase">
@@ -90,10 +87,10 @@ export default function App() {
             </div>
           </div>
 
-          {/* Bagian Kanan: Tech Stack Card */}
+
+
           <div className="relative group p-8 md:p-10 bg-slate-900/40 backdrop-blur-sm border border-slate-800/80 rounded-[2rem] hover:border-indigo-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-500/10 overflow-hidden">
              
-             {/* Efek Cahaya (Ambient Glow) */}
              <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 opacity-50 pointer-events-none"></div>
              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-sky-500/10 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 opacity-50 pointer-events-none"></div>
 
@@ -103,7 +100,6 @@ export default function App() {
              </h3>
              
              <ul className="space-y-3 text-slate-300 relative z-10">
-               {/* Frontend Web */}
                <li className="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-800/50 border border-transparent hover:border-slate-700/50 transition-all duration-300 group/item cursor-default">
                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-indigo-500/10 border border-indigo-500/20 group-hover/item:scale-105 transition-transform">
                    <span className="w-3 h-3 bg-indigo-500 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.8)]"></span> 
@@ -114,7 +110,6 @@ export default function App() {
                  </div>
                </li>
                
-               {/* Backend & Database */}
                <li className="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-800/50 border border-transparent hover:border-slate-700/50 transition-all duration-300 group/item cursor-default">
                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/20 group-hover/item:scale-105 transition-transform">
                    <span className="w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></span> 
@@ -125,7 +120,6 @@ export default function App() {
                  </div>
                </li>
                
-               {/* Mobile Development */}
                <li className="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-800/50 border border-transparent hover:border-slate-700/50 transition-all duration-300 group/item cursor-default">
                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-sky-400/10 border border-sky-400/20 group-hover/item:scale-105 transition-transform">
                    <span className="w-3 h-3 bg-sky-400 rounded-full shadow-[0_0_10px_rgba(56,189,248,0.8)]"></span> 
@@ -140,7 +134,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. PROJECTS SECTION */}
+
+
       <section id="projects" className="max-w-5xl mx-auto px-8 py-6 border-t border-slate-800/50">
         <div className="mb-1">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -150,9 +145,7 @@ export default function App() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* Project Card 1: EventRent Web Platform */}
           <div className="group relative flex flex-col justify-between p-8 bg-slate-900/40 backdrop-blur-sm border border-slate-800/80 rounded-[2rem] transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/15 overflow-hidden">
-            {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity duration-500 group-hover:opacity-100 opacity-0 pointer-events-none"></div>
             
             <div className="relative z-10">
@@ -182,7 +175,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Project Card 2: EventRent Mobile App */}
           <div className="group relative flex flex-col justify-between p-8 bg-slate-900/40 backdrop-blur-sm border border-slate-800/80 rounded-[2rem] transition-all duration-500 hover:-translate-y-2 hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-500/15 overflow-hidden">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity duration-500 group-hover:opacity-100 opacity-0 pointer-events-none"></div>
@@ -213,7 +205,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Project Card 3: Portfolio Website */}
           <div className="group relative flex flex-col justify-between p-8 bg-slate-900/40 backdrop-blur-sm border border-slate-800/80 rounded-[2rem] transition-all duration-500 hover:-translate-y-2 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/15 overflow-hidden">
             {/* Ambient Background Glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-opacity duration-500 group-hover:opacity-100 opacity-0 pointer-events-none"></div>
@@ -247,7 +238,9 @@ export default function App() {
         </div>
       </section>
 
-      {/* 5. CERTIFICATES SECTION */}
+
+
+
       <section id="certificates" className="max-w-5xl mx-auto px-8 py-8 border-t border-slate-800/50">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
@@ -258,10 +251,8 @@ export default function App() {
           </p>
         </div>
 
-        {/* Certificates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
-          {/* Certificate 1 */}
           <div className="group relative rounded-2xl overflow-hidden border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 shadow-lg">
             <img src="SERTIF_IYEN.jpeg" alt="Certificate 1" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500 bg-slate-900" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -269,7 +260,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Certificate 2 */}
           <div className="group relative rounded-2xl overflow-hidden border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 shadow-lg">
             <img src="SERTIF_MAGANG.jpeg" alt="Certificate 2" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500 bg-slate-900" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -277,7 +267,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Certificate 3 */}
           <div className="group relative rounded-2xl overflow-hidden border border-slate-800 hover:border-indigo-500/50 transition-all duration-300 shadow-lg">
             <img src="SERTIF_BESTPROJECT2.jpeg" alt="Certificate 3" className="w-full h-auto aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500 bg-slate-900" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -288,7 +277,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. CONTACT & FOOTER SECTION */}
+
+
       <footer id="contact" className="border-t border-slate-800/50 bg-slate-950 pt-20 pb-10">
         <div className="max-w-5xl mx-auto px-8 flex flex-col items-center text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-6">
