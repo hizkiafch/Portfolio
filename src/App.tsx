@@ -4,9 +4,19 @@ export default function App() {
       
       {/* 1. NAVBAR */}
       <nav className="w-full py-6 px-8 flex justify-between items-center border-b border-slate-800">
-        <div className="text-2xl font-extrabold tracking-tighter text-indigo-400">
-          H.
-        </div>
+        {/* LOGO DENGAN FUNGSI REFRESH HALAMAN */}
+        <a 
+          href="/" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.reload();
+          }} 
+          className="cursor-pointer transition-transform duration-300 hover:scale-105"
+        >
+          <img src="/logo.svg" alt="Logo" className="w-8 h-8" />
+        </a>
+
+        {/* MENU NAVBAR */}
         <div className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
           <a href="#about" className="hover:text-indigo-400 transition-colors">About</a>
           <a href="#projects" className="hover:text-indigo-400 transition-colors">Projects</a>
@@ -14,6 +24,7 @@ export default function App() {
           <a href="#contact" className="hover:text-indigo-400 transition-colors">Contact</a>
         </div>
       </nav>
+
 
       {/* 2. HERO SECTION */}
       <main className="max-w-5xl mx-auto px-8 py-12 flex flex-col-reverse md:flex-row justify-between items-center min-h-[85vh] gap-12">
@@ -304,7 +315,7 @@ export default function App() {
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
+
